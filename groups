@@ -1,3 +1,5 @@
-# UUID                                  	Group Name
-#
-bef973f2d812c647e4671c46291d768d55adbe8f	openstack/vitrage-distgit-ptl
+# UUID          Group Name
+False 	Non-Interactive Users
+9deb266dca967bdd005ae1b6595ef06878d902f3       	openstack/vitrage-distgit-core
+bef973f2d812c647e4671c46291d768d55adbe8f        	openstack/vitrage-distgit-ptl
+global:Registered-Users		Registered Users
