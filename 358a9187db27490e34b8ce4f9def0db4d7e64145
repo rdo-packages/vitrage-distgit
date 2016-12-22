@@ -1,0 +1,124 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fab399f4_63b050de",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-12-22T08:24:36Z",
+      "side": 1,
+      "message": "The -tests package should require the test requirements as well, otherwise it will fail to run tests when installed.",
+      "range": {
+        "startLine": 125,
+        "startChar": 0,
+        "endLine": 125,
+        "endChar": 54
+      },
+      "revId": "358a9187db27490e34b8ce4f9def0db4d7e64145",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fab399f4_23b658dd",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-12-22T08:24:36Z",
+      "side": 1,
+      "message": "If we are using oslo-config-generator to generate the config file, we should not need a vitrage.conf.sample file",
+      "range": {
+        "startLine": 147,
+        "startChar": 0,
+        "endLine": 147,
+        "endChar": 90
+      },
+      "revId": "358a9187db27490e34b8ce4f9def0db4d7e64145",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fab399f4_43bb4cc4",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-12-22T08:24:36Z",
+      "side": 1,
+      "message": "As before, we should be using the file created by oslo-config-generator instead.",
+      "range": {
+        "startLine": 155,
+        "startChar": 0,
+        "endLine": 155,
+        "endChar": 79
+      },
+      "revId": "358a9187db27490e34b8ce4f9def0db4d7e64145",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fab399f4_83b564cf",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-12-22T08:24:36Z",
+      "side": 1,
+      "message": "(optional, but advisable) We could add a %check section here to run unit tests. This will allow us to figure out any missing build requirements, and the runtime requirements for the -tests subpackage.",
+      "revId": "358a9187db27490e34b8ce4f9def0db4d7e64145",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fab399f4_03aa3470",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-12-22T08:24:36Z",
+      "side": 1,
+      "message": "Missing LICENSE",
+      "revId": "358a9187db27490e34b8ce4f9def0db4d7e64145",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fab399f4_e3ac608f",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-12-22T08:24:36Z",
+      "side": 1,
+      "message": "missing LICENSE. The api, graph and notifier subpackages may not have it because they depend on -common.",
+      "revId": "358a9187db27490e34b8ce4f9def0db4d7e64145",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
