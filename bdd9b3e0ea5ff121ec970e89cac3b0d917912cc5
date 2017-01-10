@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dab895d6_c273d8e5",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2017-01-10T08:31:32Z",
+      "side": 1,
+      "message": "BuildRequires:    python-sphinx is already defined above. Please remove this line.",
+      "revId": "bdd9b3e0ea5ff121ec970e89cac3b0d917912cc5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dab895d6_e280dc8d",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2017-01-10T08:31:32Z",
+      "side": 1,
+      "message": "Please also exclude vitrage/tests from main package and move it under python-vitrage-tests",
+      "revId": "bdd9b3e0ea5ff121ec970e89cac3b0d917912cc5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dab895d6_027eb0ae",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 111
+      },
+      "writtenOn": "2017-01-10T08:31:32Z",
+      "side": 1,
+      "message": "It should be %doc html.",
+      "revId": "bdd9b3e0ea5ff121ec970e89cac3b0d917912cc5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
