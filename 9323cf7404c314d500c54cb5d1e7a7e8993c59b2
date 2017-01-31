@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baada198_07b6c03d",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-01-31T12:22:10Z",
+      "side": 1,
+      "message": "nit: use spaces instead of tabs",
+      "revId": "9323cf7404c314d500c54cb5d1e7a7e8993c59b2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baada198_e7b8ec2c",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-01-31T12:22:10Z",
+      "side": 1,
+      "message": "Shouldn\u0027t there be a vitrage.conf file in this subpackage? I see we are creating it with oslo-config-generator, but not installing it anywhere.",
+      "range": {
+        "startLine": 228,
+        "startChar": 0,
+        "endLine": 235,
+        "endChar": 53
+      },
+      "revId": "9323cf7404c314d500c54cb5d1e7a7e8993c59b2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baada198_c7abe8d4",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-01-31T12:22:10Z",
+      "side": 1,
+      "message": "This should be:\n\n%doc doc/build/html\n\nOtherwise we\u0027re including the source for documentation instead of the actual build.",
+      "range": {
+        "startLine": 258,
+        "startChar": 1,
+        "endLine": 258,
+        "endChar": 16
+      },
+      "revId": "9323cf7404c314d500c54cb5d1e7a7e8993c59b2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
