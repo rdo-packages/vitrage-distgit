@@ -43,29 +43,30 @@ Summary:          OpenStack vitrage python libraries
 
 Requires:         python-lxml
 
-Requires:         python-oslo-config >= 2:2.6.0
-Requires:         python-oslo-i18n >= 1.5.0
-Requires:         python-oslo-log >= 1.2.0
-Requires:         python-oslo-policy >= 0.5.0
-Requires:         python-oslo-messaging > 2.6.1
-Requires:         python-oslo-service >= 0.1.0
+Requires:         python-oslo-config >= 2:3.14.0,
+Requires:         python-oslo-i18n >= 2.1.0
+Requires:         python-oslo-log >= 3.11.0
+Requires:         python-oslo-policy >= 1.17.0
+Requires:         python-oslo-messaging >= 5.14.0
+Requires:         python-oslo-service >= 1.10.0
 Requires:         python-oslo-utils >= 1.6.0
-Requires:         python-keystonemiddleware >= 2.2.0
-Requires:         python-pbr >= 1.6
-Requires:         python-pecan >= 0.8.0
-Requires:         python-stevedore >= 1.5.0
+Requires:         python-keystonemiddleware >= 4.12.0
+Requires:         python-pbr >= 1.8
+Requires:         python-pecan >= 1.0.0
+Requires:         python-stevedore >= 1.17.1
 Requires:         python-werkzeug >= 0.7
 Requires:         python-paste-deploy >= 1.5.0
-Requires:         python-ceilometerclient >= 2.2.1
-Requires:         python-keystoneclient >= 3.5.0
-Requires:         python-cinderclient >= 1.3.1
-Requires:         python-neutronclient >= 2.6.0
-Requires:         python-novaclient >= 2.26.0
+Requires:         python-ceilometerclient >= 2.5.0
+Requires:         python-keystoneclient >= 1:3.8.0
+Requires:         python-cinderclient >= 1.6.0
+Requires:         python-neutronclient >= 5.1.0
+Requires:         python-novaclient >= 1:2.29.0
 Requires:         python-networkx >= 1.10
-Requires:         python-voluptuous >= 0.8.8
+Requires:         python-voluptuous >= 0.8.9
 Requires:         sympy >= 0.7.6
-Requires:         python-dateutil >= 1.5
+Requires:         python-dateutil >= 2.4.2
 Requires:         python-keystoneauth1 >= 2.12.1
+Requires:         python-heatclient >= 1.6.1
 
 %description -n   python-vitrage
 OpenStack vitrage provides API and services for RCA (Root Cause Analysis)
