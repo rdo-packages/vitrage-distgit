@@ -3,7 +3,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:             openstack-vitrage
-Version:          1.5.0
+Version:          1.5.1
 Release:          1%{?dist}
 Summary:          OpenStack Root Cause Analysis
 License:          ASL 2.0
@@ -268,6 +268,9 @@ exit 0
 %doc doc/build/html
 
 %changelog
+* Thu Feb 16 2017 Alfredo Moralejo <amoralej@redhat.com> 1.5.1-1
+- Update to 1.5.1
+
 * Fri Feb 10 2017 Alfredo Moralejo <amoralej@redhat.com> 1.5.0-1
 - Update to 1.5.0
 
