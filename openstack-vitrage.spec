@@ -15,6 +15,7 @@ Source2:          %{service}.logrotate
 Source10:         %{name}-api.service
 Source11:         %{name}-graph.service
 Source12:         %{name}-notifier.service
+Source13:         %{name}-collector.service
 
 
 BuildRequires:    python-setuptools
@@ -123,6 +124,16 @@ OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
 This package contains the vitrage notifier service.
 
 
+%package        collector
+Summary:        OpenStack vitrage collector
+Requires:       %{name}-common = %{version}-%{release}
+
+%description collector
+OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
+
+This package contains the vitrage collector service.
+
+
 %package -n python-vitrage-tests
 Summary:        Vitrage tests
 Requires:       python-vitrage = %{version}-%{release}
@@ -190,6 +201,7 @@ install -p -D -m 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/logrotate.d/%{name}
 install -p -D -m 644 %{SOURCE10} %{buildroot}%{_unitdir}/%{name}-api.service
 install -p -D -m 644 %{SOURCE11} %{buildroot}%{_unitdir}/%{name}-graph.service
 install -p -D -m 644 %{SOURCE12} %{buildroot}%{_unitdir}/%{name}-notifier.service
+install -p -D -m 644 %{SOURCE13} %{buildroot}%{_unitdir}/%{name}-collector.service
 
 # Remove unused files
 rm -f %{buildroot}/usr/etc/vitrage/*
@@ -219,6 +231,11 @@ exit 0
 %preun -n %{name}-notifier
 %systemd_preun %{name}-notifier.service
 
+%post -n %{name}-collector
+%systemd_post %{name}-collector.service
+
+%preun -n %{name}-collector
+%systemd_preun %{name}-collector.service
 
 %files -n python-vitrage
 %license LICENSE
@@ -254,6 +271,10 @@ exit 0
 %files api
 %{_bindir}/vitrage-api
 %{_unitdir}/%{name}-api.service
+
+%files collector
+%{_bindir}/vitrage-collector
+%{_unitdir}/%{name}-collector.service
 
 %files graph
 %{_bindir}/vitrage-graph

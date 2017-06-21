@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenStack Vitrage collector service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=vitrage
+ExecStart=/usr/bin/vitrage-collector --logfile /var/log/vitrage/collector.log
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
