@@ -30,6 +30,7 @@ BuildRequires:    python-keystoneclient
 BuildRequires:    python-keystonemiddleware
 BuildRequires:    python-oslo-db
 BuildRequires:    python-oslo-policy
+BuildRequires:    git
 
 
 
@@ -147,7 +148,7 @@ This package contains the Vitrage test files.
 %package doc
 Summary:    Documentation for OpenStack vitrage
 
-BuildRequires: python-oslo-sphinx
+BuildRequires: python-openstackdocstheme
 
 %description doc
 OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
@@ -155,7 +156,7 @@ OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
 This package contains documentation files for vitrage.
 
 %prep
-%setup -q -n %{service}-%{upstream_version}
+%autosetup -n %{service}-%{upstream_version} -S git
 
 find . \( -name .gitignore -o -name .placeholder \) -delete
 
