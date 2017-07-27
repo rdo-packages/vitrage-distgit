@@ -30,6 +30,7 @@ BuildRequires:    python-keystoneclient
 BuildRequires:    python-keystonemiddleware
 BuildRequires:    python-oslo-db
 BuildRequires:    python-oslo-policy
+BuildRequires:    python-osprofiler
 BuildRequires:    git
 
 
