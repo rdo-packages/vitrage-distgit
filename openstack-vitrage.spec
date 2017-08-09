@@ -16,6 +16,7 @@ Source10:         %{name}-api.service
 Source11:         %{name}-graph.service
 Source12:         %{name}-notifier.service
 Source13:         %{name}-collector.service
+Source14:         %{name}-ml.service
 
 
 BuildRequires:    python-setuptools
@@ -136,6 +137,16 @@ OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
 This package contains the vitrage collector service.
 
 
+%package        ml
+Summary:        OpenStack vitrage machine learning
+Requires:       %{name}-common = %{version}-%{release}
+
+%description ml
+OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
+
+This package contains the vitrage machine learning service.
+
+
 %package -n python-vitrage-tests
 Summary:        Vitrage tests
 Requires:       python-vitrage = %{version}-%{release}
@@ -170,7 +181,7 @@ rm -rf {test-,}requirements.txt tools/{pip,test}-requires
 
 %build
 # generate html docs
-%{__python2} setup.py build_sphinx
+%{__python2} setup.py build_sphinx -b html
 
 # Generate config file
 PYTHONPATH=. oslo-config-generator --config-file=etc/vitrage/vitrage-config-generator.conf
@@ -204,6 +215,7 @@ install -p -D -m 644 %{SOURCE10} %{buildroot}%{_unitdir}/%{name}-api.service
 install -p -D -m 644 %{SOURCE11} %{buildroot}%{_unitdir}/%{name}-graph.service
 install -p -D -m 644 %{SOURCE12} %{buildroot}%{_unitdir}/%{name}-notifier.service
 install -p -D -m 644 %{SOURCE13} %{buildroot}%{_unitdir}/%{name}-collector.service
+install -p -D -m 644 %{SOURCE14} %{buildroot}%{_unitdir}/%{name}-ml.service
 
 # Remove unused files
 rm -f %{buildroot}/usr/etc/vitrage/*
@@ -238,6 +250,12 @@ exit 0
 
 %preun -n %{name}-collector
 %systemd_preun %{name}-collector.service
+
+%post -n %{name}-ml
+%systemd_post %{name}-ml.service
+
+%preun -n %{name}-ml
+%systemd_preun %{name}-ml.service
 
 %files -n python-vitrage
 %license LICENSE
@@ -285,6 +303,10 @@ exit 0
 %files notifier
 %{_bindir}/vitrage-notifier
 %{_unitdir}/%{name}-notifier.service
+
+%files ml
+%{_bindir}/vitrage-ml
+%{_unitdir}/%{name}-ml.service
 
 %files doc
 %license LICENSE
