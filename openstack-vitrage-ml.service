@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenStack Vitrage machine learning service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=vitrage
+ExecStart=/usr/bin/vitrage-ml --logfile /var/log/vitrage/ml.log
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
