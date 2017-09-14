@@ -18,7 +18,7 @@ Source12:         %{name}-notifier.service
 Source13:         %{name}-collector.service
 Source14:         %{name}-ml.service
 
-
+BuildRequires:    openstack-macros
 BuildRequires:    python-setuptools
 BuildRequires:    python2-devel
 BuildRequires:    systemd
