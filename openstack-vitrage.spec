@@ -87,9 +87,7 @@ Summary:        Components common to all OpenStack vitrage services
 
 Requires:       python-vitrage = %{version}-%{release}
 
-Requires(post):   systemd-units
-Requires(preun):  systemd-units
-Requires(postun): systemd-units
+%{?systemd_requires}
 Requires(pre):    shadow-utils
 
 
