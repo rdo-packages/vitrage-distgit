@@ -31,6 +31,7 @@ BuildRequires:    python-keystoneclient
 BuildRequires:    python-keystonemiddleware
 BuildRequires:    python-oslo-db
 BuildRequires:    python-oslo-policy
+BuildRequires: 	  openstack-macros
 BuildRequires:    python-osprofiler
 BuildRequires:    git
 
@@ -183,7 +184,7 @@ find vitrage -name \*.py -exec sed -i '/\/usr\/bin\/env python/{d;q}' {} +
 
 sed -i '/setup_requires/d; /install_requires/d; /dependency_links/d' setup.py
 
-rm -rf {test-,}requirements.txt tools/{pip,test}-requires
+%py_req_cleanup
 
 
 %build
