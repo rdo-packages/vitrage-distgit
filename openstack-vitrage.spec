@@ -18,7 +18,7 @@ Source12:         %{name}-notifier.service
 Source13:         %{name}-collector.service
 Source14:         %{name}-ml.service
 
-BuildRequires:    openstack-macros
+BuildRequires:	  openstack-macros
 BuildRequires:    python-setuptools
 BuildRequires:    python2-devel
 BuildRequires:    systemd
@@ -183,7 +183,7 @@ find vitrage -name \*.py -exec sed -i '/\/usr\/bin\/env python/{d;q}' {} +
 
 sed -i '/setup_requires/d; /install_requires/d; /dependency_links/d' setup.py
 
-rm -rf {test-,}requirements.txt tools/{pip,test}-requires
+%py_req_cleanup
 
 
 %build
