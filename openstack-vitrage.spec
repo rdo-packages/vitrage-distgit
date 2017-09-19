@@ -47,6 +47,8 @@ Summary:          OpenStack vitrage python libraries
 
 Requires:         python-lxml
 
+Requires:         python-sqlalchemy >= 1.0.10
+Requires:         python-oslo-db >= 4.24.0
 Requires:         python-oslo-config >= 2:4.0.0
 Requires:         python-oslo-i18n >= 2.1.0
 Requires:         python-oslo-log >= 3.22.0
@@ -288,6 +290,7 @@ exit 0
 %dir %attr(0755, vitrage, root)  %{_localstatedir}/log/vitrage
 %dir %attr(0755, vitrage, root)  %{_sysconfdir}/vitrage/static_datasources
 %dir %attr(0755, vitrage, root)  %{_sysconfdir}/vitrage/templates
+%{_bindir}/vitrage-dbsync
 
 %defattr(-, vitrage, vitrage, -)
 %dir %{_sharedstatedir}/vitrage
@@ -318,3 +321,4 @@ exit 0
 %doc doc/build/html
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/vitrage/commit/?id=b51339ef1ecec687f9c3a853c178dee35c9f0dea
