@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a961159_2c180884",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 424
+      },
+      "writtenOn": "2017-09-20T14:37:28Z",
+      "side": 1,
+      "message": "Small nit: Can you get rid of the tab and replace with spaces please",
+      "revId": "058f0ef567e90203eb0a6a53c0f039d6ee2c7e5a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
