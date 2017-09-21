@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a961159_e7f45989",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2017-09-21T08:48:23Z",
+      "side": 1,
+      "message": "tab",
+      "revId": "ceb5137a6d20f7a0343a02cb5f7fb411fd89efc3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
