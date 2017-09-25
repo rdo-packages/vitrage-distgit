@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a930d6b_6b176152",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-09-25T08:15:36Z",
+      "side": 0,
+      "message": "The macro substitution is not going to work in this case, because %py_req_cleanup will not remove tools/{pip,test}-requires",
+      "range": {
+        "startLine": 186,
+        "startChar": 32,
+        "endLine": 186,
+        "endChar": 57
+      },
+      "revId": "b61e75ab3f091a3071fb54c210f7d0cc46d97cfe",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
