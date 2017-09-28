@@ -2,6 +2,8 @@
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
+%global common_desc OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
+
 Name:             openstack-vitrage
 Version:          XXX
 Release:          XXX
@@ -79,7 +81,7 @@ Requires:         pysnmp
 #Requires:         python-pyzabbix
 
 %description -n   python-vitrage
-OpenStack vitrage provides API and services for RCA (Root Cause Analysis)
+%{common_desc}
 
 This package contains the vitrage python library.
 
@@ -93,7 +95,7 @@ Requires(pre):    shadow-utils
 
 
 %description    common
-OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
+%{common_desc}
 
 
 %package        api
@@ -103,7 +105,7 @@ Summary:        OpenStack vitrage api
 Requires:       %{name}-common = %{version}-%{release}
 
 %description api
-OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
+%{common_desc}
 
 This package contains the vitrage API service.
 
@@ -115,7 +117,7 @@ Summary:        OpenStack vitrage graph
 Requires:       %{name}-common = %{version}-%{release}
 
 %description graph
-OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
+%{common_desc}
 
 This package contains the vitrage graph service.
 
@@ -126,7 +128,7 @@ Summary:        OpenStack vitrage notifier
 Requires:       %{name}-common = %{version}-%{release}
 
 %description notifier
-OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
+%{common_desc}
 
 This package contains the vitrage notifier service.
 
@@ -136,7 +138,7 @@ Summary:        OpenStack vitrage collector
 Requires:       %{name}-common = %{version}-%{release}
 
 %description collector
-OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
+%{common_desc}
 
 This package contains the vitrage collector service.
 
@@ -146,7 +148,7 @@ Summary:        OpenStack vitrage machine learning
 Requires:       %{name}-common = %{version}-%{release}
 
 %description ml
-OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
+%{common_desc}
 
 This package contains the vitrage machine learning service.
 
@@ -157,7 +159,7 @@ Requires:       python-vitrage = %{version}-%{release}
 Requires:       python-tempest >= 12.0.0
 
 %description -n python-vitrage-tests
-OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
+%{common_desc}
 
 This package contains the Vitrage test files.
 
@@ -167,7 +169,7 @@ Summary:    Documentation for OpenStack vitrage
 BuildRequires: python-openstackdocstheme
 
 %description doc
-OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
+%{common_desc}
 
 This package contains documentation files for vitrage.
 
