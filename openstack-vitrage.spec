@@ -3,7 +3,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:             openstack-vitrage
-Version:          1.8.1
+Version:          1.8.2
 Release:          1%{?dist}
 Summary:          OpenStack Root Cause Analysis
 License:          ASL 2.0
@@ -318,6 +318,9 @@ exit 0
 %doc doc/build/html
 
 %changelog
+* Fri Oct 27 2017 rdo-trunk <javier.pena@redhat.com> 1.8.2-1
+- Update to 1.8.2
+
 * Tue Aug 22 2017 Alfredo Moralejo <amoralej@redhat.com> 1.8.1-1
 - Update to 1.8.1
 
