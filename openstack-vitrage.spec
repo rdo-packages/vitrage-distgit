@@ -202,7 +202,6 @@ PYTHONPATH=. oslo-config-generator --config-file=etc/vitrage/vitrage-config-gene
 # Install config files
 install -d -m 755 %{buildroot}%{_sysconfdir}/vitrage/datasources_values
 install -p -D -m 640 etc/vitrage/vitrage.conf %{buildroot}%{_sysconfdir}/vitrage/vitrage.conf
-install -p -D -m 640 etc/vitrage/policy.json %{buildroot}%{_sysconfdir}/vitrage/policy.json
 install -p -D -m 640 etc/vitrage/api-paste.ini %{buildroot}%{_sysconfdir}/vitrage/api-paste.ini
 install -p -D -m 640 etc/vitrage/datasources_values/*.yaml %{buildroot}%{_sysconfdir}/vitrage/datasources_values/
 
@@ -282,7 +281,6 @@ exit 0
 %dir %{_sysconfdir}/vitrage
 %dir %{_sysconfdir}/vitrage/datasources_values
 %config(noreplace) %attr(-, root, vitrage) %{_sysconfdir}/vitrage/vitrage.conf
-%config(noreplace) %attr(-, root, vitrage) %{_sysconfdir}/vitrage/policy.json
 %config(noreplace) %attr(-, root, vitrage) %{_sysconfdir}/vitrage/api-paste.ini
 %config(noreplace) %attr(-, root, vitrage) %{_sysconfdir}/vitrage/datasources_values/*.yaml
 %config(noreplace) %{_sysconfdir}/logrotate.d/%{name}
