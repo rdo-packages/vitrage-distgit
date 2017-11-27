@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba7be1f8_f1025a0a",
+        "filename": "openstack-vitrage-persistor.service",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2017-11-27T12:40:40Z",
+      "side": 1,
+      "message": "persistor",
+      "range": {
+        "startLine": 2,
+        "startChar": 30,
+        "endLine": 2,
+        "endChar": 38
+      },
+      "revId": "3ba18e509cc36b7c5b1c2641ff3ad9181388828e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba7be1f8_3c04c914",
+        "filename": "openstack-vitrage-persistor.service",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2017-11-27T12:40:40Z",
+      "side": 1,
+      "message": "persistor",
+      "range": {
+        "startLine": 8,
+        "startChar": 63,
+        "endLine": 8,
+        "endChar": 71
+      },
+      "revId": "3ba18e509cc36b7c5b1c2641ff3ad9181388828e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba7be1f8_1cff0503",
+        "filename": "openstack-vitrage-persistor.service",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2017-11-27T12:40:40Z",
+      "side": 1,
+      "message": "persistor",
+      "range": {
+        "startLine": 8,
+        "startChar": 27,
+        "endLine": 8,
+        "endChar": 35
+      },
+      "revId": "3ba18e509cc36b7c5b1c2641ff3ad9181388828e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
