@@ -19,6 +19,7 @@ Source11:         %{name}-graph.service
 Source12:         %{name}-notifier.service
 Source13:         %{name}-collector.service
 Source14:         %{name}-ml.service
+Source15:         %{name}-persistor.service
 
 BuildRequires:    openstack-macros
 BuildRequires:    python-setuptools
@@ -152,6 +153,14 @@ Requires:       %{name}-common = %{version}-%{release}
 
 This package contains the vitrage machine learning service.
 
+%package        persistor
+Summary:        OpenStack vitrage persistor
+Requires:       %{name}-common = %{version}-%{release}
+
+%description persistor
+%{common_desc}
+
+This package contains the vitrage persistor service.
 
 %package -n python-vitrage-tests
 Summary:        Vitrage tests
@@ -221,6 +230,7 @@ install -p -D -m 644 %{SOURCE11} %{buildroot}%{_unitdir}/%{name}-graph.service
 install -p -D -m 644 %{SOURCE12} %{buildroot}%{_unitdir}/%{name}-notifier.service
 install -p -D -m 644 %{SOURCE13} %{buildroot}%{_unitdir}/%{name}-collector.service
 install -p -D -m 644 %{SOURCE14} %{buildroot}%{_unitdir}/%{name}-ml.service
+install -p -D -m 644 %{SOURCE15} %{buildroot}%{_unitdir}/%{name}-persistor.service
 
 # Remove unused files
 rm -f %{buildroot}/usr/etc/vitrage/*
@@ -261,6 +271,12 @@ exit 0
 
 %preun -n %{name}-ml
 %systemd_preun %{name}-ml.service
+
+%post -n %{name}-persistor
+%systemd_post %{name}-persistor.service
+
+%preun -n %{name}-persistor
+%systemd_preun %{name}-persistor.service
 
 %files -n python-vitrage
 %license LICENSE
@@ -312,6 +328,11 @@ exit 0
 %files ml
 %{_bindir}/vitrage-ml
 %{_unitdir}/%{name}-ml.service
+
+%files persistor
+%{_bindir}/vitrage-persistor
+%{_unitdir}/%{name}-persistor.service
+
 
 %files doc
 %license LICENSE

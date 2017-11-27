@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenStack Vitrage persistor service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=vitrage
+ExecStart=/usr/bin/vitrage-persistor --logfile /var/log/vitrage/persistor.log
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
