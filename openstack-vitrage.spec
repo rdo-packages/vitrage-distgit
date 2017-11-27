@@ -318,3 +318,4 @@ exit 0
 %doc doc/build/html
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/vitrage/commit/?id=c708a6784ecf2318e6c7e453506237101f089043
