@@ -20,6 +20,7 @@ Source12:         %{name}-notifier.service
 Source13:         %{name}-collector.service
 Source14:         %{name}-ml.service
 Source15:         %{name}-persistor.service
+Source16:         %{name}-snmp-parsing.service
 
 BuildRequires:    openstack-macros
 BuildRequires:    python-setuptools
@@ -162,6 +163,15 @@ Requires:       %{name}-common = %{version}-%{release}
 
 This package contains the vitrage persistor service.
 
+%package        snmp-parsing
+Summary:        OpenStack vitrage SNMP parsing
+Requires:       %{name}-common = %{version}-%{release}
+
+%description snmp-parsing
+%{common_desc}
+
+This package contains the SNMP parsing service.
+
 %package -n python-vitrage-tests
 Summary:        Vitrage tests
 Requires:       python-vitrage = %{version}-%{release}
@@ -231,6 +241,7 @@ install -p -D -m 644 %{SOURCE12} %{buildroot}%{_unitdir}/%{name}-notifier.servic
 install -p -D -m 644 %{SOURCE13} %{buildroot}%{_unitdir}/%{name}-collector.service
 install -p -D -m 644 %{SOURCE14} %{buildroot}%{_unitdir}/%{name}-ml.service
 install -p -D -m 644 %{SOURCE15} %{buildroot}%{_unitdir}/%{name}-persistor.service
+install -p -D -m 644 %{SOURCE16} %{buildroot}%{_unitdir}/%{name}-snmp-parsing.service
 
 # Remove unused files
 rm -f %{buildroot}/usr/etc/vitrage/*
@@ -277,6 +288,12 @@ exit 0
 
 %preun -n %{name}-persistor
 %systemd_preun %{name}-persistor.service
+
+%post -n %{name}-snmp-parsing
+%systemd_post %{name}-snmp-parsing.service
+
+%preun -n %{name}-snmp-parsing
+%systemd_preun %{name}-snmp-parsing.service
 
 %files -n python-vitrage
 %license LICENSE
@@ -333,6 +350,9 @@ exit 0
 %{_bindir}/vitrage-persistor
 %{_unitdir}/%{name}-persistor.service
 
+%files snmp-parsing
+%{_bindir}/vitrage-snmp-parsing
+%{_unitdir}/%{name}-snmp-parsing.service
 
 %files doc
 %license LICENSE
