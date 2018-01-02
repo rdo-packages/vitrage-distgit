@@ -28,6 +28,7 @@ BuildRequires:    python2-devel
 BuildRequires:    systemd
 BuildRequires:    python-pbr
 BuildRequires:    python-sphinx
+BuildRequires:    sympy
 BuildRequires:    python-oslo-messaging
 BuildRequires:    python-oslo-config
 BuildRequires:    python-keystoneauth1
