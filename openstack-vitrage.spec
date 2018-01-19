@@ -37,6 +37,7 @@ BuildRequires:    python-keystonemiddleware
 BuildRequires:    python-oslo-db
 BuildRequires:    python-oslo-policy
 BuildRequires:    python-osprofiler
+BuildRequires:    python-voluptuous
 BuildRequires:    git
 
 
