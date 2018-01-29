@@ -217,9 +217,6 @@ PYTHONPATH=. oslo-config-generator --config-file=etc/vitrage/vitrage-config-gene
 %install
 %{__python2} setup.py install --skip-build --root %{buildroot}
 
-# Create fake egg-info for the tempest plugin
-%py2_entrypoint %{service} %{service}
-
 # Install config files
 install -d -m 755 %{buildroot}%{_sysconfdir}/vitrage/datasources_values
 install -p -D -m 640 etc/vitrage/vitrage.conf %{buildroot}%{_sysconfdir}/vitrage/vitrage.conf
@@ -301,14 +298,11 @@ exit 0
 %license LICENSE
 %{python2_sitelib}/vitrage
 %{python2_sitelib}/vitrage-*.egg-info
-%exclude %{python2_sitelib}/vitrage_tempest_tests
 %exclude %{python2_sitelib}/vitrage/tests
 
 %files -n python-vitrage-tests
 %license LICENSE
-%{python2_sitelib}/vitrage_tempest_tests
 %{python2_sitelib}/vitrage/tests
-%{python2_sitelib}/%{service}_tests.egg-info
 
 %files common
 %license LICENSE
