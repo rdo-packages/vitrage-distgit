@@ -23,21 +23,21 @@ Source15:         %{name}-persistor.service
 Source16:         %{name}-snmp-parsing.service
 
 BuildRequires:    openstack-macros
-BuildRequires:    python-setuptools
+BuildRequires:    python2-setuptools
 BuildRequires:    python2-devel
 BuildRequires:    systemd
-BuildRequires:    python-pbr
-BuildRequires:    python-sphinx
+BuildRequires:    python2-pbr
+BuildRequires:    python2-sphinx
 BuildRequires:    sympy
-BuildRequires:    python-oslo-messaging
-BuildRequires:    python-oslo-config
-BuildRequires:    python-keystoneauth1
-BuildRequires:    python-keystoneclient
-BuildRequires:    python-keystonemiddleware
-BuildRequires:    python-oslo-db
-BuildRequires:    python-oslo-policy
-BuildRequires:    python-osprofiler
-BuildRequires:    python-voluptuous
+BuildRequires:    python2-oslo-messaging
+BuildRequires:    python2-oslo-config
+BuildRequires:    python2-keystoneauth1
+BuildRequires:    python2-keystoneclient
+BuildRequires:    python2-keystonemiddleware
+BuildRequires:    python2-oslo-db
+BuildRequires:    python2-oslo-policy
+BuildRequires:    python2-osprofiler
+BuildRequires:    python2-voluptuous
 BuildRequires:    git
 
 
@@ -52,37 +52,50 @@ Summary:          OpenStack vitrage python libraries
 
 Requires:         python-lxml
 
-Requires:         python-sqlalchemy >= 1.0.10
-Requires:         python-oslo-db >= 4.24.0
-Requires:         python-oslo-config >= 2:4.0.0
-Requires:         python-oslo-i18n >= 2.1.0
-Requires:         python-oslo-log >= 3.22.0
-Requires:         python-oslo-policy >= 1.23.0
-Requires:         python-oslo-messaging >= 5.24.2
-Requires:         python-oslo-service >= 1.10.0
-Requires:         python-oslo-utils >= 3.20.0
-Requires:         python-keystonemiddleware >= 4.12.0
-Requires:         python-pbr >= 2.0.0
-Requires:         python-pecan >= 1.0.0
-Requires:         python-stevedore >= 1.20.0
+Requires:         python2-sqlalchemy >= 1.0.10
+Requires:         python2-oslo-db >= 4.27.0
+Requires:         python2-oslo-config >= 2:5.1.0
+Requires:         python2-oslo-i18n >= 3.15.3
+Requires:         python2-oslo-log >= 3.36.0
+Requires:         python2-oslo-policy >= 1.30.0
+Requires:         python2-oslo-messaging >= 5.29.0
+Requires:         python2-oslo-service >= 1.24.0
+Requires:         python2-oslo-utils >= 3.33.0
+Requires:         python2-keystonemiddleware >= 4.17.0
+Requires:         python2-pbr >= 2.0.0
+Requires:         python2-pecan >= 1.0.0
+Requires:         python2-stevedore >= 1.20.0
 Requires:         python-werkzeug >= 0.7
 Requires:         python-paste-deploy >= 1.5.0
-Requires:         python-ceilometerclient >= 2.5.0
-Requires:         python-keystoneclient >= 1:3.8.0
-Requires:         python-cinderclient >= 3.1.0
-Requires:         python-neutronclient >= 6.3.0
-Requires:         python-novaclient >= 1:9.0.0
+Requires:         python2-ceilometerclient >= 2.5.0
+Requires:         python2-keystoneclient >= 1:3.8.0
+Requires:         python2-cinderclient >= 3.3.0
+Requires:         python2-neutronclient >= 6.3.0
+Requires:         python2-novaclient >= 9.1.0
 Requires:         python-networkx >= 1.10
-Requires:         python-voluptuous >= 0.8.9
+Requires:         python2-voluptuous >= 0.8.9
 Requires:         sympy >= 0.7.6
-Requires:         python-dateutil >= 2.4.2
-Requires:         python-keystoneauth1 >= 2.12.1
-Requires:         python-heatclient >= 1.6.1
-Requires:         python-osprofiler >= 1.4.0
+Requires:         python2-dateutil >= 2.4.2
+Requires:         python2-keystoneauth1 >= 3.3.0
+Requires:         python2-heatclient >= 1.10.0
+Requires:         python2-osprofiler >= 1.4.0
 Requires:         python-jwt
 Requires:         pysnmp
-# python-pyzabbix is required by vitrage but is not available in repo yet
-#Requires:         python-pyzabbix
+Requires:         python2-aodhclient >= 0.9.0
+Requires:         python2-babel >= 2.3.4
+Requires:         python2-debtcollector >= 1.2.0
+Requires:         python2-eventlet >= 0.18.2
+Requires:         python2-oslo-context >= 2.19.2
+Requires:         python2-oslo-middleware >= 3.31.0
+Requires:         python2-oslo-serialization >= 2.18.0
+Requires:         python-PyMySQL >= 0.7.6
+Requires:         python2-pysnmp >= 4.2.3
+Requires:         PyYAML >= 3.10
+Requires:         python2-requests >= 2.14.2
+Requires:         python2-six >= 1.10.0
+Requires:         python-webob >= 1.7.1
+# python2-pyzabbix is required by vitrage but is not available in repo yet
+#Requires:         python2-pyzabbix
 
 %description -n   python-vitrage
 %{common_desc}
@@ -177,7 +190,7 @@ This package contains the SNMP parsing service.
 %package -n python-vitrage-tests
 Summary:        Vitrage tests
 Requires:       python-vitrage = %{version}-%{release}
-Requires:       python-tempest >= 12.0.0
+Requires:       python2-tempest >= 12.0.0
 
 %description -n python-vitrage-tests
 %{common_desc}
