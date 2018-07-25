@@ -330,6 +330,7 @@ exit 0
 %dir %attr(0755, vitrage, root)  %{_sysconfdir}/vitrage/static_datasources
 %dir %attr(0755, vitrage, root)  %{_sysconfdir}/vitrage/templates
 %{_bindir}/vitrage-dbsync
+%{_bindir}/vitrage-purge-data
 
 %defattr(-, vitrage, vitrage, -)
 %dir %{_sharedstatedir}/vitrage
