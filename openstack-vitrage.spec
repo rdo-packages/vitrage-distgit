@@ -52,48 +52,54 @@ Summary:          OpenStack vitrage python libraries
 
 Requires:         python-lxml
 
-Requires:         python2-sqlalchemy >= 1.0.10
-Requires:         python2-oslo-db >= 4.27.0
-Requires:         python2-oslo-config >= 2:5.1.0
-Requires:         python2-oslo-i18n >= 3.15.3
-Requires:         python2-oslo-log >= 3.36.0
-Requires:         python2-oslo-policy >= 1.30.0
-Requires:         python2-oslo-messaging >= 5.29.0
+Requires:         python2-sqlalchemy >= 1.2.5
+Requires:         python2-oslo-db >= 4.35.0
+Requires:         python2-oslo-config >= 2:5.2.0
+Requires:         python2-oslo-i18n >= 3.20.0
+Requires:         python2-oslo-log >= 3.37.0
+Requires:         python2-oslo-policy >= 1.34.0
+Requires:         python2-oslo-messaging >= 5.36.0
 Requires:         python2-oslo-service >= 1.24.0
 Requires:         python2-oslo-utils >= 3.33.0
-Requires:         python2-keystonemiddleware >= 4.17.0
-Requires:         python2-pbr >= 2.0.0
-Requires:         python2-pecan >= 1.0.0
-Requires:         python2-stevedore >= 1.20.0
-Requires:         python-werkzeug >= 0.7
-Requires:         python-paste-deploy >= 1.5.0
-Requires:         python2-ceilometerclient >= 2.5.0
-Requires:         python2-keystoneclient >= 1:3.8.0
+Requires:         python2-keystonemiddleware >= 4.21.0
+Requires:         python2-pbr >= 3.1.1
+Requires:         python2-pecan >= 1.2.1
+Requires:         python2-stevedore >= 1.28.0
+Requires:         python-werkzeug >= 0.14.1
+Requires:         python-paste-deploy >= 1.5.2
+Requires:         python2-ceilometerclient >= 2.9.0
+Requires:         python2-keystoneclient >= 1:3.15.0
 Requires:         python2-cinderclient >= 3.3.0
-Requires:         python2-neutronclient >= 6.3.0
-Requires:         python2-novaclient >= 9.1.0
-Requires:         python-networkx >= 1.10
-Requires:         python2-voluptuous >= 0.8.9
-Requires:         sympy >= 0.7.6
-Requires:         python2-dateutil >= 2.4.2
-Requires:         python2-keystoneauth1 >= 3.3.0
-Requires:         python2-heatclient >= 1.10.0
-Requires:         python2-osprofiler >= 1.4.0
+Requires:         python2-neutronclient >= 6.7.0
+Requires:         python2-novaclient >= 10.1.0
+Requires:         python-networkx >= 1.11
+Requires:         python2-voluptuous >= 0.11.1
+Requires:         sympy >= 1.1.1
+Requires:         python2-dateutil >= 2.7.0
+Requires:         python2-keystoneauth1 >= 3.4.0
+Requires:         python2-heatclient >= 1.14.0
+Requires:         python2-osprofiler >= 2.0.0
 Requires:         python-jwt
 Requires:         pysnmp
-Requires:         python2-aodhclient >= 0.9.0
-Requires:         python2-babel >= 2.3.4
-Requires:         python2-debtcollector >= 1.2.0
-Requires:         python2-eventlet >= 0.18.2
-Requires:         python2-oslo-context >= 2.19.2
-Requires:         python2-oslo-middleware >= 3.31.0
-Requires:         python2-oslo-serialization >= 2.18.0
-Requires:         python-PyMySQL >= 0.7.6
-Requires:         python2-pysnmp >= 4.2.3
+Requires:         python2-aodhclient >= 1.0.0
+Requires:         python2-babel >= 2.5.3
+Requires:         python2-debtcollector >= 1.19.0
+Requires:         python2-eventlet >= 0.20.0
+Requires:         python2-oslo-context >= 2.20.0
+Requires:         python2-oslo-middleware >= 3.35.0
+Requires:         python2-oslo-serialization >= 2.25.0
+Requires:         python-PyMySQL >= 0.8.0
+Requires:         python2-pysnmp >= 4.4.4
 Requires:         PyYAML >= 3.10
-Requires:         python2-requests >= 2.14.2
-Requires:         python2-six >= 1.10.0
-Requires:         python-webob >= 1.7.1
+Requires:         python2-requests >= 2.18.4
+Requires:         python2-six >= 1.11.0
+Requires:         python-webob >= 1.7.4
+Requires:         python2-cotyledon >= 1.6.8
+Requires:         python2-futures
+Requires:         python2-gnocchiclient >= 3.3.1
+Requires:         python2-mistralclient >= 3.3.0
+Requires:         python2-openstackclient >= 3.12.0
+Requires:         python2-pytz
 # python2-pyzabbix is required by vitrage but is not available in repo yet
 #Requires:         python2-pyzabbix
 
