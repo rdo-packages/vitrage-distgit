@@ -1,3 +1,14 @@
+# Macros for py2/py3 compatibility
+%if 0%{?fedora} || 0%{?rhel} > 7
+%global pyver %{python3_pkgversion}
+%else
+%global pyver 2
+%endif
+%global pyver_bin python%{pyver}
+%global pyver_sitelib %python%{pyver}_sitelib
+%global pyver_install %py%{pyver}_install
+%global pyver_build %py%{pyver}_build
+# End of macros for py2/py3 compatibility
 %global service vitrage
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -23,21 +34,21 @@ Source15:         %{name}-persistor.service
 Source16:         %{name}-snmp-parsing.service
 
 BuildRequires:    openstack-macros
-BuildRequires:    python2-setuptools
-BuildRequires:    python2-devel
+BuildRequires:    python%{pyver}-setuptools
+BuildRequires:    python%{pyver}-devel
 BuildRequires:    systemd
-BuildRequires:    python2-pbr
-BuildRequires:    python2-sphinx
+BuildRequires:    python%{pyver}-pbr
+BuildRequires:    python%{pyver}-sphinx
 BuildRequires:    sympy
-BuildRequires:    python2-oslo-messaging
-BuildRequires:    python2-oslo-config
-BuildRequires:    python2-keystoneauth1
-BuildRequires:    python2-keystoneclient
-BuildRequires:    python2-keystonemiddleware
-BuildRequires:    python2-oslo-db
-BuildRequires:    python2-oslo-policy
-BuildRequires:    python2-osprofiler
-BuildRequires:    python2-voluptuous
+BuildRequires:    python%{pyver}-oslo-messaging
+BuildRequires:    python%{pyver}-oslo-config
+BuildRequires:    python%{pyver}-keystoneauth1
+BuildRequires:    python%{pyver}-keystoneclient
+BuildRequires:    python%{pyver}-keystonemiddleware
+BuildRequires:    python%{pyver}-oslo-db
+BuildRequires:    python%{pyver}-oslo-policy
+BuildRequires:    python%{pyver}-osprofiler
+BuildRequires:    python%{pyver}-voluptuous
 BuildRequires:    git
 
 
@@ -46,64 +57,78 @@ Vitrage is the OpenStack RCA (Root Cause Analysis) Engine
 for organizing, analyzing and expanding OpenStack alarms & events,
 
 
-%package -n       python-vitrage
+%package -n       python%{pyver}-vitrage
 Summary:          OpenStack vitrage python libraries
+%{?python_provide:%python_provide python%{pyver}-vitrage}
 
 
-Requires:         python-lxml
 
-Requires:         python2-sqlalchemy >= 1.2.5
-Requires:         python2-oslo-db >= 4.35.0
-Requires:         python2-oslo-config >= 2:5.2.0
-Requires:         python2-oslo-i18n >= 3.20.0
-Requires:         python2-oslo-log >= 3.37.0
-Requires:         python2-oslo-policy >= 1.34.0
-Requires:         python2-oslo-messaging >= 5.36.0
-Requires:         python2-oslo-service >= 1.24.0
-Requires:         python2-oslo-utils >= 3.33.0
-Requires:         python2-keystonemiddleware >= 4.21.0
-Requires:         python2-pbr >= 3.1.1
-Requires:         python2-pecan >= 1.2.1
-Requires:         python2-stevedore >= 1.28.0
-Requires:         python-werkzeug >= 0.14.1
-Requires:         python-paste-deploy >= 1.5.2
-Requires:         python2-ceilometerclient >= 2.9.0
-Requires:         python2-keystoneclient >= 1:3.15.0
-Requires:         python2-cinderclient >= 3.3.0
-Requires:         python2-neutronclient >= 6.7.0
-Requires:         python2-novaclient >= 10.1.0
-Requires:         python-networkx >= 1.10
-Requires:         python2-voluptuous >= 0.8.9
+Requires:         python%{pyver}-sqlalchemy >= 1.2.5
+Requires:         python%{pyver}-oslo-db >= 4.35.0
+Requires:         python%{pyver}-oslo-config >= 2:5.2.0
+Requires:         python%{pyver}-oslo-i18n >= 3.20.0
+Requires:         python%{pyver}-oslo-log >= 3.37.0
+Requires:         python%{pyver}-oslo-policy >= 1.34.0
+Requires:         python%{pyver}-oslo-messaging >= 5.36.0
+Requires:         python%{pyver}-oslo-service >= 1.24.0
+Requires:         python%{pyver}-oslo-utils >= 3.33.0
+Requires:         python%{pyver}-keystonemiddleware >= 4.21.0
+Requires:         python%{pyver}-pbr >= 3.1.1
+Requires:         python%{pyver}-pecan >= 1.2.1
+Requires:         python%{pyver}-stevedore >= 1.28.0
+Requires:         python%{pyver}-werkzeug >= 0.14.1
+Requires:         python%{pyver}-ceilometerclient >= 2.9.0
+Requires:         python%{pyver}-keystoneclient >= 1:3.15.0
+Requires:         python%{pyver}-cinderclient >= 3.3.0
+Requires:         python%{pyver}-neutronclient >= 6.7.0
+Requires:         python%{pyver}-novaclient >= 10.1.0
+Requires:         python%{pyver}-voluptuous >= 0.8.9
 Requires:         sympy >= 0.7.6
-Requires:         python2-dateutil >= 2.7.0
-Requires:         python2-keystoneauth1 >= 3.4.0
-Requires:         python2-heatclient >= 1.14.0
-Requires:         python2-osprofiler >= 2.0.0
+Requires:         python%{pyver}-dateutil >= 2.7.0
+Requires:         python%{pyver}-keystoneauth1 >= 3.4.0
+Requires:         python%{pyver}-heatclient >= 1.14.0
+Requires:         python%{pyver}-osprofiler >= 2.0.0
+Requires:         python%{pyver}-aodhclient >= 1.0.0
+Requires:         python%{pyver}-babel >= 2.3.4
+Requires:         python%{pyver}-debtcollector >= 1.19.0
+Requires:         python%{pyver}-eventlet >= 0.20.0
+Requires:         python%{pyver}-oslo-context >= 2.20.0
+Requires:         python%{pyver}-oslo-middleware >= 3.35.0
+Requires:         python%{pyver}-oslo-serialization >= 2.25.0
+Requires:         python%{pyver}-pysnmp >= 4.2.3
+Requires:         python%{pyver}-requests >= 2.18.4
+Requires:         python%{pyver}-six >= 1.11.0
+Requires:         python%{pyver}-webob >= 1.7.4
+Requires:         python%{pyver}-cotyledon >= 1.6.3
+Requires:         python%{pyver}-futures
+Requires:         python%{pyver}-gnocchiclient >= 3.3.1
+Requires:         python%{pyver}-mistralclient >= 3.3.0
+Requires:         python%{pyver}-openstackclient >= 3.12.0
+Requires:         python%{pyver}-pytz
+# python2-pyzabbix is required by vitrage but is not available in repo yet
+#Requires:         python%{pyver}-pyzabbix
+
+# Handle python2 exception
+%if %{pyver} == 2
+Requires:         python-lxml
+Requires:         python-paste-deploy >= 1.5.2
+Requires:         python-networkx >= 1.10
 Requires:         python-jwt
 Requires:         pysnmp
-Requires:         python2-aodhclient >= 1.0.0
-Requires:         python2-babel >= 2.3.4
-Requires:         python2-debtcollector >= 1.19.0
-Requires:         python2-eventlet >= 0.20.0
-Requires:         python2-oslo-context >= 2.20.0
-Requires:         python2-oslo-middleware >= 3.35.0
-Requires:         python2-oslo-serialization >= 2.25.0
 Requires:         python-PyMySQL >= 0.7.6
-Requires:         python2-pysnmp >= 4.2.3
 Requires:         PyYAML >= 3.10
-Requires:         python2-requests >= 2.18.4
-Requires:         python2-six >= 1.11.0
-Requires:         python-webob >= 1.7.4
-Requires:         python2-cotyledon >= 1.6.3
-Requires:         python2-futures
-Requires:         python2-gnocchiclient >= 3.3.1
-Requires:         python2-mistralclient >= 3.3.0
-Requires:         python2-openstackclient >= 3.12.0
-Requires:         python2-pytz
-# python2-pyzabbix is required by vitrage but is not available in repo yet
-#Requires:         python2-pyzabbix
+%else
+Requires:         python%{pyver}-lxml
+Requires:         python%{pyver}-paste-deploy >= 1.5.2
+Requires:         python%{pyver}-networkx >= 1.10
+Requires:         python%{pyver}-jwt
+Requires:         python%{pyver}-pysnmp
+Requires:         python%{pyver}-PyMySQL >= 0.7.6
+Requires:         python%{pyver}-PyYAML >= 3.10
+%endif
 
-%description -n   python-vitrage
+
+%description -n   python%{pyver}-vitrage
 %{common_desc}
 
 This package contains the vitrage python library.
@@ -111,7 +136,7 @@ This package contains the vitrage python library.
 %package        common
 Summary:        Components common to all OpenStack vitrage services
 
-Requires:       python-vitrage = %{version}-%{release}
+Requires:       python%{pyver}-vitrage = %{version}-%{release}
 
 %{?systemd_requires}
 Requires(pre):    shadow-utils
@@ -193,12 +218,13 @@ Requires:       %{name}-common = %{version}-%{release}
 
 This package contains the SNMP parsing service.
 
-%package -n python-vitrage-tests
+%package -n python%{pyver}-vitrage-tests
 Summary:        Vitrage tests
-Requires:       python-vitrage = %{version}-%{release}
-Requires:       python2-tempest >= 12.0.0
+%{?python_provide:%python_provide python%{pyver}-vitrage-tests}
+Requires:       python%{pyver}-vitrage = %{version}-%{release}
+Requires:       python%{pyver}-tempest >= 12.0.0
 
-%description -n python-vitrage-tests
+%description -n python%{pyver}-vitrage-tests
 %{common_desc}
 
 This package contains the Vitrage test files.
@@ -206,7 +232,7 @@ This package contains the Vitrage test files.
 %package doc
 Summary:    Documentation for OpenStack vitrage
 
-BuildRequires: python-openstackdocstheme
+BuildRequires: python%{pyver}-openstackdocstheme
 
 %description doc
 %{common_desc}
@@ -227,14 +253,14 @@ sed -i '/setup_requires/d; /install_requires/d; /dependency_links/d' setup.py
 
 %build
 # generate html docs
-%{__python2} setup.py build_sphinx
+%{pyver_build}
 
 # Generate config file
-PYTHONPATH=. oslo-config-generator --config-file=etc/vitrage/vitrage-config-generator.conf
-%{__python2} setup.py build
+PYTHONPATH=. oslo-config-generator-%{pyver} --config-file=etc/vitrage/vitrage-config-generator.conf
+%{pyver_build}
 
 %install
-%{__python2} setup.py install --skip-build --root %{buildroot}
+%{pyver_install}
 
 # Install config files
 install -d -m 755 %{buildroot}%{_sysconfdir}/vitrage/datasources_values
@@ -313,15 +339,15 @@ exit 0
 %preun -n %{name}-snmp-parsing
 %systemd_preun %{name}-snmp-parsing.service
 
-%files -n python-vitrage
+%files -n python%{pyver}-vitrage
 %license LICENSE
-%{python2_sitelib}/vitrage
-%{python2_sitelib}/vitrage-*.egg-info
-%exclude %{python2_sitelib}/vitrage/tests
+%{pyver_sitelib}/vitrage
+%{pyver_sitelib}/vitrage-*.egg-info
+%exclude %{pyver_sitelib}/vitrage/tests
 
-%files -n python-vitrage-tests
+%files -n python%{pyver}-vitrage-tests
 %license LICENSE
-%{python2_sitelib}/vitrage/tests
+%{pyver_sitelib}/vitrage/tests
 
 %files common
 %license LICENSE
