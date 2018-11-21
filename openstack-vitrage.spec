@@ -28,10 +28,9 @@ Source2:          %{service}.logrotate
 Source10:         %{name}-api.service
 Source11:         %{name}-graph.service
 Source12:         %{name}-notifier.service
-Source13:         %{name}-collector.service
-Source14:         %{name}-ml.service
-Source15:         %{name}-persistor.service
-Source16:         %{name}-snmp-parsing.service
+Source13:         %{name}-ml.service
+Source14:         %{name}-persistor.service
+Source15:         %{name}-snmp-parsing.service
 
 BuildRequires:    openstack-macros
 BuildRequires:    python%{pyver}-setuptools
@@ -170,6 +169,7 @@ This package contains the vitrage API service.
 Summary:        OpenStack vitrage graph
 
 Requires:       %{name}-common = %{version}-%{release}
+Obsoletes:      %{name}-collector < %{version}-%{release}
 
 %description graph
 %{common_desc}
@@ -186,17 +186,6 @@ Requires:       %{name}-common = %{version}-%{release}
 %{common_desc}
 
 This package contains the vitrage notifier service.
-
-
-%package        collector
-Summary:        OpenStack vitrage collector
-Requires:       %{name}-common = %{version}-%{release}
-
-%description collector
-%{common_desc}
-
-This package contains the vitrage collector service.
-
 
 %package        ml
 Summary:        OpenStack vitrage machine learning
@@ -291,10 +280,9 @@ install -p -D -m 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/logrotate.d/%{name}
 install -p -D -m 644 %{SOURCE10} %{buildroot}%{_unitdir}/%{name}-api.service
 install -p -D -m 644 %{SOURCE11} %{buildroot}%{_unitdir}/%{name}-graph.service
 install -p -D -m 644 %{SOURCE12} %{buildroot}%{_unitdir}/%{name}-notifier.service
-install -p -D -m 644 %{SOURCE13} %{buildroot}%{_unitdir}/%{name}-collector.service
-install -p -D -m 644 %{SOURCE14} %{buildroot}%{_unitdir}/%{name}-ml.service
-install -p -D -m 644 %{SOURCE15} %{buildroot}%{_unitdir}/%{name}-persistor.service
-install -p -D -m 644 %{SOURCE16} %{buildroot}%{_unitdir}/%{name}-snmp-parsing.service
+install -p -D -m 644 %{SOURCE13} %{buildroot}%{_unitdir}/%{name}-ml.service
+install -p -D -m 644 %{SOURCE14} %{buildroot}%{_unitdir}/%{name}-persistor.service
+install -p -D -m 644 %{SOURCE15} %{buildroot}%{_unitdir}/%{name}-snmp-parsing.service
 
 # Remove unused files
 rm -f %{buildroot}/usr/etc/vitrage/*
@@ -323,12 +311,6 @@ exit 0
 
 %preun -n %{name}-notifier
 %systemd_preun %{name}-notifier.service
-
-%post -n %{name}-collector
-%systemd_post %{name}-collector.service
-
-%preun -n %{name}-collector
-%systemd_preun %{name}-collector.service
 
 %post -n %{name}-ml
 %systemd_post %{name}-ml.service
@@ -380,10 +362,6 @@ exit 0
 %files api
 %{_bindir}/vitrage-api
 %{_unitdir}/%{name}-api.service
-
-%files collector
-%{_bindir}/vitrage-collector
-%{_unitdir}/%{name}-collector.service
 
 %files graph
 %{_bindir}/vitrage-graph
