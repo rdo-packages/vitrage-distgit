@@ -40,6 +40,7 @@ BuildRequires:    python%{pyver}-pbr
 BuildRequires:    python%{pyver}-sphinx
 BuildRequires:    python%{pyver}-oslo-messaging
 BuildRequires:    python%{pyver}-oslo-config
+BuildRequires:    python%{pyver}-oslo-upgradecheck
 BuildRequires:    python%{pyver}-keystoneauth1
 BuildRequires:    python%{pyver}-keystoneclient
 BuildRequires:    python%{pyver}-keystonemiddleware
@@ -76,6 +77,7 @@ Requires:         python%{pyver}-oslo-log >= 3.37.0
 Requires:         python%{pyver}-oslo-policy >= 1.34.0
 Requires:         python%{pyver}-oslo-messaging >= 5.36.0
 Requires:         python%{pyver}-oslo-service >= 1.24.0
+Requires:         python%{pyver}-oslo-upgradecheck >= 0.1.1
 Requires:         python%{pyver}-oslo-utils >= 3.33.0
 Requires:         python%{pyver}-keystonemiddleware >= 4.21.0
 Requires:         python%{pyver}-pbr >= 3.1.1
@@ -354,6 +356,7 @@ exit 0
 %dir %attr(0755, vitrage, root)  %{_sysconfdir}/vitrage/templates
 %{_bindir}/vitrage-dbsync
 %{_bindir}/vitrage-purge-data
+%{_bindir}/vitrage-status
 
 %defattr(-, vitrage, vitrage, -)
 %dir %{_sharedstatedir}/vitrage
