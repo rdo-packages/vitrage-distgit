@@ -53,8 +53,10 @@ BuildRequires:    git
 # Handle python2 exception
 %if %{pyver} == 2
 BuildRequires:    sympy
+BuildRequires:    python-networkx
 %else
 BuildRequires:    python%{pyver}-sympy
+BuildRequires:    python%{pyver}-networkx
 %endif
 
 
