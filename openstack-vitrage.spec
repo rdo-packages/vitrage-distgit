@@ -112,6 +112,7 @@ Requires:         python%{pyver}-gnocchiclient >= 3.3.1
 Requires:         python%{pyver}-mistralclient >= 3.3.0
 Requires:         python%{pyver}-openstackclient >= 3.12.0
 Requires:         python%{pyver}-pytz
+Requires:         python%{pyver}-psutil
 # python2-pyzabbix is required by vitrage but is not available in repo yet
 #Requires:         python%{pyver}-pyzabbix
 
@@ -126,6 +127,8 @@ Requires:         pysnmp
 Requires:         python-PyMySQL >= 0.7.6
 Requires:         PyYAML >= 3.10
 Requires:         python%{pyver}-futures
+Requires:         python-tooz
+Requires:         python-psutil
 %else
 Requires:         python%{pyver}-sympy >= 0.7.6
 Requires:         python%{pyver}-lxml
@@ -135,6 +138,8 @@ Requires:         python%{pyver}-jwt
 Requires:         python%{pyver}-pysnmp
 Requires:         python%{pyver}-PyMySQL >= 0.7.6
 Requires:         python%{pyver}-PyYAML >= 3.10
+Requires:         python%{pyver}-tooz
+Requires:         python%{pyver}-psutil
 %endif
 
 
