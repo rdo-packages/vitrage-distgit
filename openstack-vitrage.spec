@@ -47,6 +47,7 @@ BuildRequires:    python%{pyver}-keystonemiddleware
 BuildRequires:    python%{pyver}-oslo-db
 BuildRequires:    python%{pyver}-oslo-policy
 BuildRequires:    python%{pyver}-osprofiler
+BuildRequires:    python%{pyver}-tenacity
 BuildRequires:    python%{pyver}-voluptuous
 BuildRequires:    git
 
@@ -113,6 +114,7 @@ Requires:         python%{pyver}-mistralclient >= 3.3.0
 Requires:         python%{pyver}-openstackclient >= 3.12.0
 Requires:         python%{pyver}-pytz
 Requires:         python%{pyver}-psutil
+Requires:         python%{pyver}-tenacity >= 4.9.0
 # python2-pyzabbix is required by vitrage but is not available in repo yet
 #Requires:         python%{pyver}-pyzabbix
 
