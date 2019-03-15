@@ -89,22 +89,21 @@ Requires:         python%{pyver}-stevedore >= 1.28.0
 Requires:         python%{pyver}-werkzeug >= 0.14.1
 Requires:         python%{pyver}-ceilometerclient >= 2.9.0
 Requires:         python%{pyver}-keystoneclient >= 1:3.15.0
-Requires:         python%{pyver}-cinderclient >= 3.3.0
 Requires:         python%{pyver}-neutronclient >= 6.7.0
-Requires:         python%{pyver}-novaclient >= 10.1.0
-Requires:         python%{pyver}-voluptuous >= 0.8.9
+Requires:         python%{pyver}-novaclient >= 1:10.1.0
+Requires:         python%{pyver}-voluptuous >= 0.10.5
 Requires:         python%{pyver}-dateutil >= 2.7.0
 Requires:         python%{pyver}-keystoneauth1 >= 3.4.0
 Requires:         python%{pyver}-heatclient >= 1.14.0
 Requires:         python%{pyver}-osprofiler >= 2.0.0
 Requires:         python%{pyver}-aodhclient >= 1.0.0
-Requires:         python%{pyver}-babel >= 2.3.4
+Requires:         python%{pyver}-babel >= 2.5.3
 Requires:         python%{pyver}-debtcollector >= 1.19.0
 Requires:         python%{pyver}-eventlet >= 0.20.0
 Requires:         python%{pyver}-oslo-context >= 2.20.0
 Requires:         python%{pyver}-oslo-middleware >= 3.35.0
 Requires:         python%{pyver}-oslo-serialization >= 2.25.0
-Requires:         python%{pyver}-pysnmp >= 4.2.3
+Requires:         python%{pyver}-pysnmp >= 4.3.2
 Requires:         python%{pyver}-requests >= 2.18.4
 Requires:         python%{pyver}-six >= 1.11.0
 Requires:         python%{pyver}-webob >= 1.7.4
@@ -112,6 +111,9 @@ Requires:         python%{pyver}-cotyledon >= 1.6.3
 Requires:         python%{pyver}-gnocchiclient >= 3.3.1
 Requires:         python%{pyver}-mistralclient >= 3.3.0
 Requires:         python%{pyver}-openstackclient >= 3.12.0
+Requires:         python%{pyver}-jsonschema >= 2.6.0
+Requires:         python%{pyver}-troveclient >= 2.2.0
+Requires:         python%{pyver}-zaqarclient >= 1.2.0
 Requires:         python%{pyver}-pytz
 Requires:         python%{pyver}-psutil
 Requires:         python%{pyver}-tenacity >= 4.9.0
@@ -123,10 +125,10 @@ Requires:         python%{pyver}-tenacity >= 4.9.0
 Requires:         sympy >= 0.7.6
 Requires:         python-lxml
 Requires:         python-paste-deploy >= 1.5.2
-Requires:         python-networkx >= 1.10
+Requires:         python-networkx >= 2.0
 Requires:         python-jwt
 Requires:         pysnmp
-Requires:         python-PyMySQL >= 0.7.6
+Requires:         python-PyMySQL >= 0.8.0
 Requires:         PyYAML >= 3.10
 Requires:         python%{pyver}-futures
 Requires:         python-tooz
@@ -135,10 +137,10 @@ Requires:         python-psutil
 Requires:         python%{pyver}-sympy >= 0.7.6
 Requires:         python%{pyver}-lxml
 Requires:         python%{pyver}-paste-deploy >= 1.5.2
-Requires:         python%{pyver}-networkx >= 1.10
+Requires:         python%{pyver}-networkx >= 2.0
 Requires:         python%{pyver}-jwt
 Requires:         python%{pyver}-pysnmp
-Requires:         python%{pyver}-PyMySQL >= 0.7.6
+Requires:         python%{pyver}-PyMySQL >= 0.8.0
 Requires:         python%{pyver}-PyYAML >= 3.10
 Requires:         python%{pyver}-tooz
 Requires:         python%{pyver}-psutil
