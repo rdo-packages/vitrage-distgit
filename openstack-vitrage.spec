@@ -97,7 +97,6 @@ Requires:         python%{pyver}-keystoneauth1 >= 3.4.0
 Requires:         python%{pyver}-heatclient >= 1.14.0
 Requires:         python%{pyver}-osprofiler >= 2.0.0
 Requires:         python%{pyver}-aodhclient >= 1.0.0
-Requires:         python%{pyver}-babel >= 2.5.3
 Requires:         python%{pyver}-debtcollector >= 1.19.0
 Requires:         python%{pyver}-eventlet >= 0.20.0
 Requires:         python%{pyver}-oslo-context >= 2.20.0
