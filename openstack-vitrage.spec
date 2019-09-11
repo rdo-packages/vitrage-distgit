@@ -70,8 +70,7 @@ for organizing, analyzing and expanding OpenStack alarms & events,
 Summary:          OpenStack vitrage python libraries
 %{?python_provide:%python_provide python%{pyver}-vitrage}
 
-
-
+Requires:         python%{pyver}-alembic >= 0.9.8
 Requires:         python%{pyver}-sqlalchemy >= 1.2.5
 Requires:         python%{pyver}-oslo-db >= 4.35.0
 Requires:         python%{pyver}-oslo-config >= 2:5.2.0
@@ -369,6 +368,8 @@ exit 0
 %dir %attr(0755, vitrage, root)  %{_sysconfdir}/vitrage/static_datasources
 %dir %attr(0755, vitrage, root)  %{_sysconfdir}/vitrage/templates
 %{_bindir}/vitrage-dbsync
+%{_bindir}/vitrage-dbsync-revision
+%{_bindir}/vitrage-dbsync-stamp
 %{_bindir}/vitrage-purge-data
 %{_bindir}/vitrage-status
 
