@@ -1,0 +1,9 @@
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Code-Review+2: Javier Peña <jpena@redhat.com>
+Workflow+1: Javier Peña <jpena@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 25 Sep 2019 16:23:55 +0000
+Reviewed-on: https://review.rdoproject.org/r/22562
+Project: openstack/vitrage-distgit
+Branch: refs/heads/rpm-master
