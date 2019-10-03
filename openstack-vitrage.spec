@@ -16,8 +16,8 @@
 %global common_desc OpenStack vitrage provides API and services for RCA (Root Cause Analysis).
 
 Name:             openstack-vitrage
-Version:          XXX
-Release:          XXX
+Version:          5.0.0
+Release:          1%{?dist}
 Summary:          OpenStack Root Cause Analysis
 License:          ASL 2.0
 URL:              https://github.com/openstack/vitrage
@@ -368,8 +368,6 @@ exit 0
 %dir %attr(0755, vitrage, root)  %{_sysconfdir}/vitrage/static_datasources
 %dir %attr(0755, vitrage, root)  %{_sysconfdir}/vitrage/templates
 %{_bindir}/vitrage-dbsync
-%{_bindir}/vitrage-dbsync-revision
-%{_bindir}/vitrage-dbsync-stamp
 %{_bindir}/vitrage-purge-data
 %{_bindir}/vitrage-status
 
@@ -406,3 +404,6 @@ exit 0
 %doc doc/build/html
 
 %changelog
+* Thu Oct 03 2019 RDO <dev@lists.rdoproject.org> 5.0.0-1
+- Update to 5.0.0
+
