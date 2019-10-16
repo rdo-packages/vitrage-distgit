@@ -407,3 +407,4 @@ exit 0
 * Thu Oct 03 2019 RDO <dev@lists.rdoproject.org> 5.0.0-1
 - Update to 5.0.0
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/vitrage/commit/?id=1caa3f5584b1350070b5f6d6cfd0e6bf8b4030da
