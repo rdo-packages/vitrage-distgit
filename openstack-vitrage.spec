@@ -368,6 +368,8 @@ exit 0
 %dir %attr(0755, vitrage, root)  %{_sysconfdir}/vitrage/static_datasources
 %dir %attr(0755, vitrage, root)  %{_sysconfdir}/vitrage/templates
 %{_bindir}/vitrage-dbsync
+%{_bindir}/vitrage-dbsync-revision
+%{_bindir}/vitrage-dbsync-stamp
 %{_bindir}/vitrage-purge-data
 %{_bindir}/vitrage-status
 
