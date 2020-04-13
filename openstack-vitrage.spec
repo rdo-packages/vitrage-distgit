@@ -264,7 +264,7 @@ sed -i '/setup_requires/d; /install_requires/d; /dependency_links/d' setup.py
 
 %build
 # generate html docs
-%{pyver_bin} setup.py build_sphinx
+sphinx-build-%{pyver} -W -b html doc/source doc/build/html
 
 %{pyver_build}
 
