@@ -55,7 +55,7 @@ Summary:          OpenStack vitrage python libraries
 
 Requires:         python3-alembic >= 0.9.8
 Requires:         python3-sqlalchemy >= 1.2.5
-Requires:         python3-oslo-db >= 4.35.0
+Requires:         python3-oslo-db >= 4.44.0
 Requires:         python3-oslo-config >= 2:5.2.0
 Requires:         python3-oslo-i18n >= 3.20.0
 Requires:         python3-oslo-log >= 3.44.0
@@ -97,20 +97,22 @@ Requires:         python3-troveclient >= 2.2.0
 Requires:         python3-zaqarclient >= 1.2.0
 Requires:         python3-pytz
 Requires:         python3-psutil
-Requires:         python3-tenacity >= 4.9.0
+Requires:         python3-tenacity >= 4.12.0
 # python2-pyzabbix is required by vitrage but is not available in repo yet
 #Requires:         python3-pyzabbix
 
 Requires:         python3-sympy >= 0.7.6
 Requires:         python3-lxml
 Requires:         python3-paste-deploy >= 1.5.2
-Requires:         python3-networkx >= 2.3
+Requires:         python3-networkx >= 2.4
 Requires:         python3-jwt
 Requires:         python3-pysnmp
 Requires:         python3-PyMySQL >= 0.8.0
 Requires:         python3-PyYAML >= 3.10
 Requires:         python3-tooz
 Requires:         python3-psutil
+Requires:         python3-cryptography >= 2.7
+Requires:         python3-cachetools >= 2.0.1
 
 
 %description -n   python3-vitrage
