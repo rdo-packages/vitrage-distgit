@@ -1,3 +1,5 @@
+%{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
+%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %global service vitrage
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -20,7 +22,16 @@ Source12:         %{name}-notifier.service
 Source13:         %{name}-ml.service
 Source14:         %{name}-persistor.service
 Source15:         %{name}-snmp-parsing.service
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+Source101:        http://tarballs.openstack.org/%{service}/%{service}-%{upstream_version}.tar.gz.asc
+Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
+%endif
 
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+BuildRequires:  /usr/bin/gpgv2
+%endif
 BuildRequires:    openstack-macros
 BuildRequires:    python3-setuptools
 BuildRequires:    python3-devel
@@ -221,6 +232,10 @@ BuildRequires: python3-openstackdocstheme
 This package contains documentation files for vitrage.
 
 %prep
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+%{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
+%endif
 %autosetup -n %{service}-%{upstream_version} -S git
 
 find . \( -name .gitignore -o -name .placeholder \) -delete
