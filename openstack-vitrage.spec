@@ -49,7 +49,7 @@ BuildRequires:    python3-oslo-policy
 BuildRequires:    python3-osprofiler
 BuildRequires:    python3-tenacity
 BuildRequires:    python3-voluptuous
-BuildRequires:    git
+BuildRequires:    git-core
 
 BuildRequires:    python3-sympy
 BuildRequires:    python3-networkx
