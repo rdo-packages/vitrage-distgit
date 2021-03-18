@@ -67,13 +67,13 @@ Summary:          OpenStack vitrage python libraries
 Requires:         python3-alembic >= 0.9.8
 Requires:         python3-sqlalchemy >= 1.2.5
 Requires:         python3-oslo-db >= 4.44.0
-Requires:         python3-oslo-config >= 2:5.2.0
+Requires:         python3-oslo-config >= 2:6.8.0
 Requires:         python3-oslo-i18n >= 3.20.0
 Requires:         python3-oslo-log >= 3.44.0
-Requires:         python3-oslo-policy >= 1.34.0
+Requires:         python3-oslo-policy >= 3.6.0
 Requires:         python3-oslo-messaging >= 5.36.0
 Requires:         python3-oslo-service >= 1.24.0
-Requires:         python3-oslo-upgradecheck >= 0.1.1
+Requires:         python3-oslo-upgradecheck >= 1.3.0
 Requires:         python3-oslo-utils >= 3.33.0
 Requires:         python3-keystonemiddleware >= 4.21.0
 Requires:         python3-pbr >= 3.1.1
@@ -92,36 +92,34 @@ Requires:         python3-osprofiler >= 2.0.0
 Requires:         python3-aodhclient >= 1.0.0
 Requires:         python3-debtcollector >= 1.19.0
 Requires:         python3-eventlet >= 0.20.0
-Requires:         python3-oslo-context >= 2.20.0
+Requires:         python3-oslo-context >= 2.22.0
 Requires:         python3-oslo-middleware >= 3.35.0
 Requires:         python3-oslo-serialization >= 2.25.0
 Requires:         python3-pysnmp >= 4.4.4
-Requires:         python3-requests >= 2.18.4
-Requires:         python3-six >= 1.11.0
+Requires:         python3-requests >= 2.20.0
 Requires:         python3-webob >= 1.7.4
 Requires:         python3-cotyledon >= 1.6.8
 Requires:         python3-gnocchiclient >= 3.3.1
 Requires:         python3-mistralclient >= 3.3.0
 Requires:         python3-openstackclient >= 3.12.0
-Requires:         python3-jsonschema >= 2.6.0
-Requires:         python3-troveclient >= 2.2.0
+Requires:         python3-jsonschema >= 3.2.0
 Requires:         python3-zaqarclient >= 1.2.0
-Requires:         python3-pytz
-Requires:         python3-psutil
+Requires:         python3-pytz >= 2017.2
+Requires:         python3-psutil >= 5.4.3
 Requires:         python3-tenacity >= 4.12.0
 # python2-pyzabbix is required by vitrage but is not available in repo yet
 #Requires:         python3-pyzabbix
 
-Requires:         python3-sympy >= 0.7.6
-Requires:         python3-lxml
+Requires:         python3-sympy >= 1.1.1
+Requires:         python3-lxml >= 4.2.3
 Requires:         python3-paste-deploy >= 1.5.2
 Requires:         python3-networkx >= 2.4
-Requires:         python3-jwt
+Requires:         python3-jwt >= 1.6.0
 Requires:         python3-pysnmp
 Requires:         python3-PyMySQL >= 0.8.0
-Requires:         python3-PyYAML >= 3.10
-Requires:         python3-tooz
-Requires:         python3-psutil
+Requires:         python3-yaml >= 5.1
+Requires:         python3-tooz >= 1.58.0
+Requires:         python3-psutil >= 5.4.3
 Requires:         python3-cryptography >= 2.7
 Requires:         python3-cachetools >= 2.0.1
 
