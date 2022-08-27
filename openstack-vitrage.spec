@@ -69,7 +69,6 @@ Requires:         python3-pbr >= 3.1.1
 Requires:         python3-pecan >= 1.2.1
 Requires:         python3-stevedore >= 1.28.0
 Requires:         python3-werkzeug >= 0.14.1
-Requires:         python3-ceilometerclient >= 2.9.0
 Requires:         python3-keystoneclient >= 1:3.15.0
 Requires:         python3-neutronclient >= 6.7.0
 Requires:         python3-novaclient >= 1:10.1.0
