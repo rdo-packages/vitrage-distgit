@@ -66,6 +66,7 @@ Summary:          OpenStack vitrage python libraries
 
 Requires:         python3-alembic >= 0.9.8
 Requires:         python3-sqlalchemy >= 1.2.5
+Requires:         python3-sqlalchemy < 1.4.0
 Requires:         python3-oslo-db >= 4.44.0
 Requires:         python3-oslo-config >= 2:6.8.0
 Requires:         python3-oslo-i18n >= 3.20.0
