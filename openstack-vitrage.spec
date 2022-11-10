@@ -8,12 +8,13 @@
 
 Name:             openstack-vitrage
 Version:          9.0.0
-Release:          1%{?dist}
+Release:          2%{?dist}
 Summary:          OpenStack Root Cause Analysis
 License:          ASL 2.0
 URL:              https://github.com/openstack/vitrage
 BuildArch:        noarch
 Source0:          http://tarballs.openstack.org/%{service}/%{service}-%{upstream_version}.tar.gz
+Patch001:         0001-Update-.gitreview-for-stable-zed.patch
 
 Source2:          %{service}.logrotate
 Source10:         %{name}-api.service
@@ -390,6 +391,9 @@ exit 0
 %doc doc/build/html
 
 %changelog
+* Thu Nov 10 2022 Alfredo Moralejo <amoralej@redhat.com> 9.0.0-2
+- Enable autocommit when creating db connection
+
 * Tue Sep 20 2022 RDO <dev@lists.rdoproject.org> 9.0.0-1
 - Update to 9.0.0
 
