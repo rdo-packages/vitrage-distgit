@@ -103,14 +103,14 @@ Requires:         python3-mistralclient >= 3.3.0
 Requires:         python3-openstackclient >= 3.12.0
 Requires:         python3-jsonschema >= 3.2.0
 Requires:         python3-zaqarclient >= 1.2.0
-Requires:         python3-pytz >= 2017.2
+Requires:         python3-pytz >= 2018.3
 Requires:         python3-psutil >= 5.4.3
 Requires:         python3-tenacity >= 4.12.0
 # python2-pyzabbix is required by vitrage but is not available in repo yet
 #Requires:         python3-pyzabbix
 
 Requires:         python3-sympy >= 1.1.1
-Requires:         python3-lxml >= 4.2.3
+Requires:         python3-lxml >= 4.5.2
 Requires:         python3-paste-deploy >= 1.5.2
 Requires:         python3-networkx >= 2.4
 Requires:         python3-jwt >= 1.6.0
