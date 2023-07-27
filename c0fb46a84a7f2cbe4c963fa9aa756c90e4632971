@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e423ea33_02e76c21",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-07-27T15:15:45Z",
+      "side": 1,
+      "message": "neutronclient requirement has been removed recently https://github.com/openstack/designate/commit/fd09a0cfc392349ec3e7437c86aabef40c574cd4",
+      "revId": "c0fb46a84a7f2cbe4c963fa9aa756c90e4632971",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
