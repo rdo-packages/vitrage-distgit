@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "410d135d_44fa4a80",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-08-03T12:26:48Z",
+      "side": 1,
+      "message": "i\u0027d add a explicit macro to disable or enable:\n\n%global with_doc 0\n\nThere is any reason to disable it?",
+      "revId": "5b8c4e85953496e6f5e78da7a078cea49645278d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7308ada1_c3b7866a",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-08-03T12:26:48Z",
+      "side": 1,
+      "message": "need to export it",
+      "range": {
+        "startLine": 199,
+        "startChar": 0,
+        "endLine": 199,
+        "endChar": 2
+      },
+      "revId": "5b8c4e85953496e6f5e78da7a078cea49645278d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71256ed2_133bc21f",
+        "filename": "openstack-vitrage.spec",
+        "patchSetId": 8
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-08-03T12:26:48Z",
+      "side": 1,
+      "message": "extra space at the end",
+      "range": {
+        "startLine": 277,
+        "startChar": 44,
+        "endLine": 277,
+        "endChar": 54
+      },
+      "revId": "5b8c4e85953496e6f5e78da7a078cea49645278d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
