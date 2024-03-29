@@ -1,4 +1,4 @@
-%global milestone .0rc1
+%global milestone .0rc2
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
 %global sources_gpg_sign 0x2ef3fe0ec2b075ab7458b5f8b702b20b13df2318
 %global service vitrage
@@ -16,16 +16,14 @@
 
 Name:             openstack-vitrage
 Version:          12.0.0
-Release:          0.1%{?milestone}%{?dist}
+Release:          0.2%{?milestone}%{?dist}
 Summary:          OpenStack Root Cause Analysis
 License:          Apache-2.0
 URL:              https://github.com/openstack/vitrage
 BuildArch:        noarch
 Source0:          http://tarballs.openstack.org/%{service}/%{service}-%{upstream_version}.tar.gz
 
-#
-# patches_base=12.0.0.0rc1
-#
+# patches_base=12.0.0.0rc2
 
 Source2:          %{service}.logrotate
 Source10:         %{name}-api.service
@@ -170,6 +168,11 @@ sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
 sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
 sed -i /^minversion.*/d tox.ini
 sed -i /^requires.*virtualenv.*/d tox.ini
+
+# In RDO we are providing pysnmp with pysnmp-lextudio. To avoid
+# conflicts between packages, let's switch to pysnmp-lextudio for
+# automatic deps.
+sed -i 's/^pysnmp.*/pysnmp-lextudio/g' requirements.txt
 
 # Exclude some bad-known BRs
 for pkg in %{excluded_brs}; do
@@ -345,6 +348,9 @@ exit 0
 %endif
 
 %changelog
+* Tue Apr 02 2024 RDO <dev@lists.rdoproject.org> 12.0.0-0.2.0rc1
+- Update to 12.0.0.0rc2
+
 * Mon Mar 18 2024 RDO <dev@lists.rdoproject.org> 12.0.0-0.1.0rc1
 - Update to 12.0.0.0rc1
 
