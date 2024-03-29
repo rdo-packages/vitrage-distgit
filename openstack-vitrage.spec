@@ -166,6 +166,11 @@ sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
 sed -i /^minversion.*/d tox.ini
 sed -i /^requires.*virtualenv.*/d tox.ini
 
+# In RDO we are providing pysnmp with pysnmp-lextudio. To avoid
+# conflicts between packages, let's switch to pysnmp-lextudio for
+# automatic deps.
+sed -i 's/^pysnmp.*/pysnmp-lextudio/g' requirements.txt
+
 # Exclude some bad-known BRs
 for pkg in %{excluded_brs}; do
   for reqfile in doc/requirements.txt test-requirements.txt; do
