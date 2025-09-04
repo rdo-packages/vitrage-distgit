@@ -348,3 +348,4 @@ exit 0
 %endif
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/vitrage/commit/4a668e342a2f782538c234c84b3902d60456a48c
