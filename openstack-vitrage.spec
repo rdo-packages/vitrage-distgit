@@ -46,7 +46,6 @@ BuildRequires:    systemd
 BuildRequires:    git-core
 
 
-
 %description
 Vitrage is the OpenStack RCA (Root Cause Analysis) Engine
 for organizing, analyzing and expanding OpenStack alarms & events,
